@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Code Challenge.Entities\CodeChallenge.Entities.csproj" />
+    <ProjectReference Include="..\CodeChallenge.Biz.Contract\CodeChallenge.Biz.Contract.csproj" />
+    <ProjectReference Include="..\CodeChallenge.Dal.Contract\CodeChallenge.Dal.Contract.csproj" />
+    <ProjectReference Include="..\CodeChallenge.Dal\CodeChallenge.Dal.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,14 @@
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Dal.Contract\bin\Debug\netcoreapp2.0\CodeChallenge.Dal.Contract.deps.json
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Dal.Contract\bin\Debug\netcoreapp2.0\CodeChallenge.Dal.Contract.dll
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Dal.Contract\bin\Debug\netcoreapp2.0\CodeChallenge.Dal.Contract.pdb
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Dal.Contract\bin\Debug\netcoreapp2.0\CodeChallenge.Entities.dll
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Dal.Contract\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Dal.Contract\bin\Debug\netcoreapp2.0\CodeChallenge.Entities.pdb
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Dal.Contract\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.xml
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Dal.Contract\obj\Debug\netcoreapp2.0\CodeChallenge.Dal.Contract.csprojAssemblyReference.cache
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Dal.Contract\obj\Debug\netcoreapp2.0\CodeChallenge.Dal.Contract.csproj.CoreCompileInputs.cache
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Dal.Contract\obj\Debug\netcoreapp2.0\CodeChallenge.Dal.Contract.AssemblyInfoInputs.cache
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Dal.Contract\obj\Debug\netcoreapp2.0\CodeChallenge.Dal.Contract.AssemblyInfo.cs
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Dal.Contract\obj\Debug\netcoreapp2.0\CodeChallenge.Dal.Contract.csproj.CopyComplete
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Dal.Contract\obj\Debug\netcoreapp2.0\CodeChallenge.Dal.Contract.dll
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Dal.Contract\obj\Debug\netcoreapp2.0\CodeChallenge.Dal.Contract.pdb

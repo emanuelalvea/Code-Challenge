@@ -1,0 +1,79 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "CodeChallenge.Biz/1.0.0": {
+        "dependencies": {
+          "CodeChallenge.Biz.Contract": "1.0.0",
+          "CodeChallenge.Dal": "1.0.0",
+          "CodeChallenge.Dal.Contract": "1.0.0",
+          "CodeChallenge.Entities": "1.0.0"
+        },
+        "runtime": {
+          "CodeChallenge.Biz.dll": {}
+        }
+      },
+      "CodeChallenge.Biz.Contract/1.0.0": {
+        "dependencies": {
+          "CodeChallenge.Entities": "1.0.0"
+        },
+        "runtime": {
+          "CodeChallenge.Biz.Contract.dll": {}
+        }
+      },
+      "CodeChallenge.Dal/1.0.0": {
+        "dependencies": {
+          "CodeChallenge.Dal.Contract": "1.0.0",
+          "CodeChallenge.Entities": "1.0.0"
+        },
+        "runtime": {
+          "CodeChallenge.Dal.dll": {}
+        }
+      },
+      "CodeChallenge.Dal.Contract/1.0.0": {
+        "dependencies": {
+          "CodeChallenge.Entities": "1.0.0"
+        },
+        "runtime": {
+          "CodeChallenge.Dal.Contract.dll": {}
+        }
+      },
+      "CodeChallenge.Entities/1.0.0": {
+        "runtime": {
+          "CodeChallenge.Entities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CodeChallenge.Biz/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CodeChallenge.Biz.Contract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CodeChallenge.Dal/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CodeChallenge.Dal.Contract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CodeChallenge.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

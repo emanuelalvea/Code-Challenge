@@ -1,0 +1,14 @@
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Biz.Contract\bin\Debug\netcoreapp2.0\CodeChallenge.Biz.Contract.deps.json
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Biz.Contract\bin\Debug\netcoreapp2.0\CodeChallenge.Biz.Contract.dll
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Biz.Contract\bin\Debug\netcoreapp2.0\CodeChallenge.Biz.Contract.pdb
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Biz.Contract\bin\Debug\netcoreapp2.0\CodeChallenge.Entities.dll
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Biz.Contract\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Biz.Contract\bin\Debug\netcoreapp2.0\CodeChallenge.Entities.pdb
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Biz.Contract\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.xml
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Biz.Contract\obj\Debug\netcoreapp2.0\CodeChallenge.Biz.Contract.csprojAssemblyReference.cache
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Biz.Contract\obj\Debug\netcoreapp2.0\CodeChallenge.Biz.Contract.csproj.CoreCompileInputs.cache
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Biz.Contract\obj\Debug\netcoreapp2.0\CodeChallenge.Biz.Contract.AssemblyInfoInputs.cache
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Biz.Contract\obj\Debug\netcoreapp2.0\CodeChallenge.Biz.Contract.AssemblyInfo.cs
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Biz.Contract\obj\Debug\netcoreapp2.0\CodeChallenge.Biz.Contract.csproj.CopyComplete
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Biz.Contract\obj\Debug\netcoreapp2.0\CodeChallenge.Biz.Contract.dll
+C:\Users\emanu\source\repos\Code Challenge\CodeChallenge.Biz.Contract\obj\Debug\netcoreapp2.0\CodeChallenge.Biz.Contract.pdb
