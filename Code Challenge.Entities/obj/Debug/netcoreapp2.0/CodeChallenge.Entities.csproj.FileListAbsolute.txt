@@ -3,7 +3,6 @@ C:\Users\emanu\source\repos\Code Challenge\Code Challenge.Entities\bin\Debug\net
 C:\Users\emanu\source\repos\Code Challenge\Code Challenge.Entities\bin\Debug\netcoreapp2.0\CodeChallenge.Entities.pdb
 C:\Users\emanu\source\repos\Code Challenge\Code Challenge.Entities\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\emanu\source\repos\Code Challenge\Code Challenge.Entities\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.xml
-C:\Users\emanu\source\repos\Code Challenge\Code Challenge.Entities\obj\Debug\netcoreapp2.0\CodeChallenge.Entities.csprojAssemblyReference.cache
 C:\Users\emanu\source\repos\Code Challenge\Code Challenge.Entities\obj\Debug\netcoreapp2.0\CodeChallenge.Entities.csproj.CoreCompileInputs.cache
 C:\Users\emanu\source\repos\Code Challenge\Code Challenge.Entities\obj\Debug\netcoreapp2.0\CodeChallenge.Entities.AssemblyInfoInputs.cache
 C:\Users\emanu\source\repos\Code Challenge\Code Challenge.Entities\obj\Debug\netcoreapp2.0\CodeChallenge.Entities.AssemblyInfo.cs

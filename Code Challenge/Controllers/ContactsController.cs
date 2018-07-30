@@ -67,7 +67,7 @@ namespace CodeChallenge.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ContactExists(id))
+                if (!this._contactService.ContactExists(id))
                 {
                     return NotFound();
                 }
@@ -114,9 +114,16 @@ namespace CodeChallenge.Controllers
             return Ok(contact);
         }
 
-        private bool ContactExists(int id)
+        [HttpGet("Search/{query}")]
+        public IEnumerable<Contact> SearchContact([FromRoute] string query)
         {
-            return true;//_context.Contact.Any(e => e.Id == id);
+            return this._contactService.SearchContactByPhoneOrEmail(query);            
+        }
+
+        [HttpGet("SearchByCode/{code}")]
+        public IEnumerable<Contact> SearchContactByCode([FromRoute] string code)
+        {
+            return this._contactService.SearchContactByCityCode(code);
         }
     }
 }

@@ -18,5 +18,12 @@ namespace CodeChallenge.Biz.Contract.Interface
 
         void Delete(int id);
 
+        IEnumerable<Contact> SearchContactByPhoneOrEmail(string query);
+
+        IEnumerable<Contact> SearchContactByCityCode(string code);
+
+        bool ContactExists(int id);
+
+
     }
 }

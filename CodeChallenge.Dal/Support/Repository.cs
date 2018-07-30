@@ -40,12 +40,12 @@ namespace CodeChallenge.Dal.Support
 
         public virtual IQueryable<T> Queryable()
         {
-            throw new NotImplementedException();
+            return (IQueryable<T>)this.dbentitySet;
         }
 
         public virtual IQueryable<T> QueryableAsNoTracking()
         {
-            throw new NotImplementedException();
+            return (IQueryable<T>)this.dbentitySet.AsNoTracking();
         }
 
         public virtual void Insert(T obj)

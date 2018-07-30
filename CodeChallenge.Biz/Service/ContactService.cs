@@ -18,6 +18,11 @@ namespace CodeChallenge.Biz.Service
             this._unitOfWork = unitOfWork;
         }
 
+        public bool ContactExists(int id)
+        {
+            return this._unitOfWork.Repository<Contact>().Queryable().Any(c => c.Id == id);
+        }
+
         public void Delete(int id)
         {
             this._unitOfWork.Repository<Contact>().Delete(id);
@@ -51,6 +56,21 @@ namespace CodeChallenge.Biz.Service
             }
 
             this._unitOfWork.SaveChanges();
+        }
+
+        public IEnumerable<Contact> SearchContactByCityCode(string code)
+        {
+            return this._unitOfWork.Repository<Contact>().Queryable()
+               .Where(x => (x.PersonalPhoneNumber != null && x.PersonalPhoneNumber.Substring(0, 3) == code) ||
+                            (x.WorkPhoneNumber != null && x.WorkPhoneNumber.Substring(0, 3) == code));
+        }
+
+        public IEnumerable<Contact> SearchContactByPhoneOrEmail(string query)
+        {
+            return this._unitOfWork.Repository<Contact>().Queryable()
+                .Where(x => (x.Email != null && x.Email.ToLower().Contains(query.ToLower())) ||
+                            (x.PersonalPhoneNumber != null && x.PersonalPhoneNumber.Contains(query)) ||
+                            (x.WorkPhoneNumber != null && x.WorkPhoneNumber.Contains(query)));
         }
     }
 }

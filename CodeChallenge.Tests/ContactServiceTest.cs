@@ -113,6 +113,7 @@ namespace CodeChallenge.Tests
 
             using (var db = new Context(dbOptionsBuilder.Options))
             {
+                db.Database.EnsureDeleted();
                 var unitOfWorkMock = new Mock<UnitOfWork>();
                 unitOfWorkMock.Object.Context = db;
 
@@ -132,7 +133,7 @@ namespace CodeChallenge.Tests
 
                 service.SaveOrUpdate(contact);
 
-                Assert.AreEqual(1, db.Contact.Count());
+                Assert.IsTrue(db.Contact.Any(c=> c.Id==contact.Id));
             }
         }
 
@@ -143,6 +144,8 @@ namespace CodeChallenge.Tests
 
             using (var db = new Context(dbOptionsBuilder.Options))
             {
+                db.Database.EnsureDeleted();
+
                 db.Set<Contact>().Add(new Contact()
                 {
                     Id = 1,
@@ -168,7 +171,7 @@ namespace CodeChallenge.Tests
 
                 Contact contact = new Contact
                 {
-                    Id=1,
+                    Id = 1,
                     Name = "Updated name",
                     Address = "Street 123",
                     Birtdate = new DateTime(),
@@ -181,7 +184,7 @@ namespace CodeChallenge.Tests
 
                 service.SaveOrUpdate(contact);
 
-                Assert.AreEqual(1, db.Contact.Count());
+                Assert.IsTrue(db.Contact.Any(c=> c.Id==1));
                 Assert.AreEqual("Updated name", db.Contact.FirstOrDefault().Name);
             }
         }
@@ -193,6 +196,8 @@ namespace CodeChallenge.Tests
 
             using (var db = new Context(dbOptionsBuilder.Options))
             {
+                db.Database.EnsureDeleted();
+
                 db.Set<Contact>().Add(new Contact()
                 {
                     Id = 1,
@@ -218,7 +223,151 @@ namespace CodeChallenge.Tests
 
                 service.Delete(1);
 
-                Assert.AreEqual(0, db.Contact.Count());
+                Assert.IsFalse(db.Contact.Any(c=> c.Id==1));
+            }
+        }
+
+        [TestMethod]
+        public void SearchContactByEmailOrPhone_OneContactFound()
+        {
+            var dbOptionsBuilder = new DbContextOptionsBuilder<Context>().UseInMemoryDatabase();
+
+            using (var db = new Context(dbOptionsBuilder.Options))
+            {
+                db.Set<Contact>().Add(new Contact()
+                {
+                    Id = 1,
+                    Name = "Contact 1",
+                    Address = "Street 123",
+                    Birtdate = new DateTime(),
+                    Company = "Solstice",
+                    Email = "mail@solstice.com",
+                    PersonalPhoneNumber = "123456789",
+                    ProfileImage = "/anImage.png",
+                    WorkPhoneNumber = "123456789"
+                });
+                db.SaveChangesAsync();
+
+            }
+
+            using (var db = new Context(dbOptionsBuilder.Options))
+            {
+                var unitOfWorkMock = new Mock<UnitOfWork>();
+                unitOfWorkMock.Object.Context = db;
+
+                var service = new ContactService(unitOfWorkMock.Object);
+
+                var result = service.SearchContactByPhoneOrEmail("solstice");
+
+                Assert.AreEqual(1, result.FirstOrDefault().Id);
+            }
+        }
+
+        [TestMethod]
+        public void SearchContactByEmailOrPhone_NoResultsFound()
+        {
+            var dbOptionsBuilder = new DbContextOptionsBuilder<Context>().UseInMemoryDatabase();
+
+            using (var db = new Context(dbOptionsBuilder.Options))
+            {
+                db.Set<Contact>().Add(new Contact()
+                {
+                    Id = 1,
+                    Name = "Contact 1",
+                    Address = "Street 123",
+                    Birtdate = new DateTime(),
+                    Company = "Solstice",
+                    Email = "mail@solstice.com",
+                    PersonalPhoneNumber = "123456789",
+                    ProfileImage = "/anImage.png",
+                    WorkPhoneNumber = "123456789"
+                });
+                db.SaveChangesAsync();
+
+            }
+
+            using (var db = new Context(dbOptionsBuilder.Options))
+            {
+                var unitOfWorkMock = new Mock<UnitOfWork>();
+                unitOfWorkMock.Object.Context = db;
+
+                var service = new ContactService(unitOfWorkMock.Object);
+
+                var result = service.SearchContactByPhoneOrEmail("gmail");
+
+                Assert.IsFalse(result.Any());
+            }
+        }
+
+        [TestMethod]
+        public void SearchContactByCode_NoResultsFound()
+        {
+            var dbOptionsBuilder = new DbContextOptionsBuilder<Context>().UseInMemoryDatabase();
+
+            using (var db = new Context(dbOptionsBuilder.Options))
+            {
+                db.Set<Contact>().Add(new Contact()
+                {
+                    Id = 1,
+                    Name = "Contact 1",
+                    Address = "Street 123",
+                    Birtdate = new DateTime(),
+                    Company = "Solstice",
+                    Email = "mail@solstice.com",
+                    PersonalPhoneNumber = "123456789",
+                    ProfileImage = "/anImage.png",
+                    WorkPhoneNumber = "123456789"
+                });
+                db.SaveChangesAsync();
+
+            }
+
+            using (var db = new Context(dbOptionsBuilder.Options))
+            {
+                var unitOfWorkMock = new Mock<UnitOfWork>();
+                unitOfWorkMock.Object.Context = db;
+
+                var service = new ContactService(unitOfWorkMock.Object);
+
+                var result = service.SearchContactByCityCode("333");
+
+                Assert.IsFalse(result.Any());
+            }
+        }
+
+        [TestMethod]
+        public void SearchContactByCode_OneContactFound()
+        {
+            var dbOptionsBuilder = new DbContextOptionsBuilder<Context>().UseInMemoryDatabase();
+
+            using (var db = new Context(dbOptionsBuilder.Options))
+            {
+                db.Set<Contact>().Add(new Contact()
+                {
+                    Id = 1,
+                    Name = "Contact 1",
+                    Address = "Street 123",
+                    Birtdate = new DateTime(),
+                    Company = "Solstice",
+                    Email = "mail@solstice.com",
+                    PersonalPhoneNumber = "123456789",
+                    ProfileImage = "/anImage.png",
+                    WorkPhoneNumber = "123456789"
+                });
+                db.SaveChangesAsync();
+
+            }
+
+            using (var db = new Context(dbOptionsBuilder.Options))
+            {
+                var unitOfWorkMock = new Mock<UnitOfWork>();
+                unitOfWorkMock.Object.Context = db;
+
+                var service = new ContactService(unitOfWorkMock.Object);
+
+                var result = service.SearchContactByCityCode("123");
+
+                Assert.AreEqual(1, result.FirstOrDefault().Id);
             }
         }
     }
